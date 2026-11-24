@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yatra Mitra AI - India Travel Chatbot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Yatra+One&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand"><div class="logo">🧭</div><div><h1>Yatra Mitra</h1><p>AI Edition · NLP + Kaggle Dataset</p></div></div>
+    <nav class="feats" aria-label="Features">
+      <button class="feat" data-q="@plan"><span>🗺️</span><b>Plan My Trip</b><small>Train, flight, car cost + day plan</small></button>
+      <button class="feat" data-q="@gallery"><span>📸</span><b>Photos</b><small>See a place before you go</small></button>
+      <button class="feat" data-q="@reviews"><span>⭐</span><b>Reviews</b><small>Traveller summary + your reviews</small></button>
+      <button class="feat" data-q="@weather"><span>🌦️</span><b>Live Weather</b><small>5-day forecast</small></button>
+      <button class="feat" data-q="@pack"><span>🎒</span><b>Packing Checklist</b><small>By place and season</small></button>
+      <button class="feat" data-q="@map"><span>📍</span><b>Interactive Map</b><small>Pins for top spots</small></button>
+      <button class="feat" data-q="@budget"><span>💰</span><b>Budget Calculator</b><small>Persons, hotel type, nights</small></button>
+      <button class="feat" data-q="@interest"><span>🎯</span><b>Explore by Interest</b><small>Beach, hills, heritage...</small></button>
+      <button class="feat" data-q="@month"><span>📅</span><b>Plan by Month</b><small>Where to go and when</small></button>
+      <button class="feat" data-q="@compare"><span>⚖️</span><b>Compare Places</b><small>Side-by-side</small></button>
+      <button class="feat" data-q="@surprise"><span>🎲</span><b>Surprise Me</b><small>A random destination</small></button>
+    </nav>
+    <div class="side-foot"><button id="theme">🌙 Dark mode</button><button id="clear">🗑 Clear chat</button></div>
+  </aside>
+
+  <main class="main">
+    <div class="top">
+      <div class="av">YM</div>
+      <div><b>Yatra Mitra <span class="ai-badge">AI + CSV</span></b><small>NLP first · Kaggle fallback for India tourist places</small></div>
+      <span class="dot" title="Online"></span>
+    </div>
+    <div id="chat" aria-live="polite"></div>
+    <div class="quick" id="quick"></div>
+    <form id="f">
+      <div class="box">
+        <input id="q" autocomplete="off" placeholder="Ask about any place in India..." aria-label="Your question">
+        <button type="button" id="mic" title="Speak">🎤</button>
+      </div>
+      <button class="send" aria-label="Send">➤</button>
+    </form>
+  </main>
+</div>
+
+<!-- Scripts: order matters -->
+<script src="js/config.js"></script>
+<script src="js/services.js"></script>
+<script src="js/llm.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
